@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Placeholder sketch — photo coming">
+<rect width="800" height="600" fill="#EFEEE9"/>
+<g fill="none" stroke-linecap="round" stroke-linejoin="round">
+<path d="M120 200 h240 v220 h-240 z" stroke="#C0621B" stroke-width="2.5" />
+<path d="M180 200 v-70" stroke="#C0621B" stroke-width="3" />
+<circle cx="180" cy="118" r="8" stroke="#C0621B" stroke-width="2.5"/>
+<path d="M150 250 h180 v70 h-180 z" stroke="#63656A" stroke-width="2" />
+<path d="M158 288 h24 l10 -22 12 40 10 -28 8 10 h96" stroke="#C0621B" stroke-width="2.5" />
+<path d="M150 360 h44 M150 386 h72" stroke="#63656A" stroke-width="1.6" />
+<path d="M420 160 a60 60 0 0 1 0 120 M452 128 a104 104 0 0 1 0 184 M484 96 a148 148 0 0 1 0 248" stroke="#C0621B" stroke-width="2" />
+<path d="M120 470 H700" stroke="#C9C7C0" stroke-width="1.5" stroke-dasharray="4 5" />
+<path d="M560 470 l60 -100 60 100 z" stroke="#63656A" stroke-width="2" />
+</g>
+<text x="786" y="586" text-anchor="end" font-family="system-ui,sans-serif" font-size="16" letter-spacing="1.5" fill="#63656A" opacity=".75" style="text-transform:uppercase">PLACEHOLDER SKETCH</text>
+</svg>

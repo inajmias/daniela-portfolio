@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Placeholder sketch — photo coming">
+<rect width="800" height="600" fill="#EFEEE9"/>
+<g fill="none" stroke-linecap="round" stroke-linejoin="round">
+<path d="M60 500 H740" stroke="#63656A" stroke-width="2" />
+<path d="M170 500 l-6 -160 h132 l-6 160" stroke="#63656A" stroke-width="2.5" />
+<path d="M180 340 h112 l-8 -20 h-96 z" stroke="#63656A" stroke-width="2" />
+<text x="230" y="540" text-anchor="middle" font-family="system-ui,sans-serif" font-size="17" fill="#63656A">2017 — science fair build</text>
+<path d="M480 500 l-10 -230 h180 l-10 230" stroke="#6B7F2A" stroke-width="2.5" />
+<path d="M462 270 h216 l-14 -32 h-188 z" stroke="#6B7F2A" stroke-width="2.5" />
+<path d="M520 196 h96 v34 h-96 z" stroke="#6B7F2A" stroke-width="2.5" />
+<path d="M536 196 v34 M552 196 v34 M568 196 v34 M584 196 v34 M600 196 v34" stroke="#63656A" stroke-width="1.2" />
+<path d="M568 230 v8" stroke="#63656A" stroke-width="1.8" />
+<path d="M516 380 a34 34 0 1 1 8 26 M524 412 l-12 -2 3 -14" stroke="#6B7F2A" stroke-width="2.2" />
+<path d="M604 380 a34 34 0 1 0 -8 26 M596 412 l12 -2 -3 -14" stroke="#6B7F2A" stroke-width="2.2" />
+<text x="560" y="540" text-anchor="middle" font-family="system-ui,sans-serif" font-size="17" fill="#63656A">now — solar · sensors · app</text>
+<path d="M330 400 h96 m-14 -9 14 9 -14 9" stroke="#63656A" stroke-width="1.8" />
+</g>
+<text x="786" y="586" text-anchor="end" font-family="system-ui,sans-serif" font-size="16" letter-spacing="1.5" fill="#63656A" opacity=".75" style="text-transform:uppercase">PLACEHOLDER SKETCH</text>
+</svg>

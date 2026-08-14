@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="220" viewBox="0 0 200 220">
+<g fill="none" stroke-linecap="round" stroke-linejoin="round">
+<path d="M20 60 h140 l-10 34 h-120 z" stroke="#6B7F2A" stroke-width="4" />
+<path d="M100 60 v34" stroke="#6B7F2A" stroke-width="3" />
+<text x="60" y="52" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" font-weight="600" letter-spacing="1" fill="#566270">COMPACT</text>
+<text x="140" y="52" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" font-weight="600" letter-spacing="1" fill="#6B7F2A">COMPOST</text>
+<path d="M32 94 h136 l-8 116 h-120 z" stroke="#6B7F2A" stroke-width="4" />
+<path d="M64 6 h72 v26 h-72 z" stroke="#6B7F2A" stroke-width="3" />
+<path d="M80 6 v26 M96 6 v26 M112 6 v26 M120 6 v26" stroke="#63656A" stroke-width="1.2" />
+<path d="M100 32 v10" stroke="#63656A" stroke-width="2" />
+<circle cx="160" cy="130" r="5" fill="#6B7F2A" stroke="none"/>
+<path d="M150 118 a14 14 0 0 1 20 0 M144 108 a24 24 0 0 1 32 0" stroke="#6B7F2A" stroke-width="1.8" />
+<text x="100" y="196" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" font-weight="600" letter-spacing="2" fill="#6B7F2A">BIOBOOST</text>
+</g>
+</svg>

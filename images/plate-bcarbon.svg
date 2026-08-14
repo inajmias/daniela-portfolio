@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Placeholder sketch — photo coming">
+<rect width="800" height="600" fill="#EFEEE9"/>
+<g fill="none" stroke-linecap="round" stroke-linejoin="round">
+<path d="M60 500 H740" stroke="#63656A" stroke-width="2" />
+<path d="M120 500 v-90 m0 0 a40 40 0 1 1 .1 0" stroke="#6E3560" stroke-width="2.2" />
+<path d="M220 500 v-150 m0 0 a56 56 0 1 1 .1 0" stroke="#6E3560" stroke-width="2.2" />
+<path d="M330 500 v-110 m0 0 a44 44 0 1 1 .1 0" stroke="#6E3560" stroke-width="2.2" />
+<path d="M450 500 v-170 m0 0 a62 62 0 1 1 .1 0" stroke="#6E3560" stroke-width="2.2" />
+<path d="M570 500 v-120 m0 0 a48 48 0 1 1 .1 0" stroke="#6E3560" stroke-width="2.2" />
+<path d="M670 500 v-90 m0 0 a38 38 0 1 1 .1 0" stroke="#6E3560" stroke-width="2.2" />
+<path d="M400 70 l-310 380 M400 70 l-150 400 M400 70 l0 406 M400 70 l150 400 M400 70 l310 380" stroke="#63656A" stroke-width="1.1" />
+<circle cx="400" cy="70" r="9" fill="#63656A" stroke="none"/>
+<path d="M340 56 h120" stroke="#63656A" stroke-width="2" />
+<circle cx="130" cy="420" r="2.6" fill="#6E3560" stroke="none"/>
+<circle cx="168" cy="392" r="2.6" fill="#6E3560" stroke="none"/>
+<circle cx="210" cy="360" r="2.6" fill="#6E3560" stroke="none"/>
+<circle cx="262" cy="402" r="2.6" fill="#6E3560" stroke="none"/>
+<circle cx="300" cy="372" r="2.6" fill="#6E3560" stroke="none"/>
+<circle cx="352" cy="420" r="2.6" fill="#6E3560" stroke="none"/>
+<circle cx="398" cy="344" r="2.6" fill="#6E3560" stroke="none"/>
+<circle cx="444" cy="318" r="2.6" fill="#6E3560" stroke="none"/>
+<circle cx="492" cy="396" r="2.6" fill="#6E3560" stroke="none"/>
+<circle cx="540" cy="366" r="2.6" fill="#6E3560" stroke="none"/>
+<circle cx="596" cy="428" r="2.6" fill="#6E3560" stroke="none"/>
+<circle cx="648" cy="410" r="2.6" fill="#6E3560" stroke="none"/>
+<path d="M60 460 q90 -30 180 -6 t180 -10 t180 6 t140 -8" stroke="#C9C7C0" stroke-width="1.5" stroke-dasharray="4 5" />
+</g>
+<text x="786" y="586" text-anchor="end" font-family="system-ui,sans-serif" font-size="16" letter-spacing="1.5" fill="#63656A" opacity=".75" style="text-transform:uppercase">PLACEHOLDER SKETCH</text>
+</svg>

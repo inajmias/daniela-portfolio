@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" role="img" aria-label="Placeholder sketch — photo coming">
+<rect width="300" height="400" fill="#EFEEE9"/>
+<g fill="none" stroke-linecap="round" stroke-linejoin="round">
+<path d="M40 356 h220" stroke="#63656A" stroke-width="2" />
+<path d="M80 356 v-60 m0 0 a26 26 0 1 1 .1 0" stroke="#6E3560" stroke-width="2" />
+<path d="M140 356 v-96 m0 0 a34 34 0 1 1 .1 0" stroke="#6E3560" stroke-width="2" />
+<path d="M205 356 v-70 m0 0 a28 28 0 1 1 .1 0" stroke="#6E3560" stroke-width="2" />
+<path d="M150 44 l-92 240 M150 44 l0 240 M150 44 l92 240" stroke="#63656A" stroke-width="1.2" />
+<circle cx="150" cy="44" r="7" fill="#63656A" stroke="none"/>
+<circle cx="84" cy="292" r="2.4" fill="#6E3560" stroke="none"/>
+<circle cx="104" cy="268" r="2.4" fill="#6E3560" stroke="none"/>
+<circle cx="128" cy="296" r="2.4" fill="#6E3560" stroke="none"/>
+<circle cx="146" cy="250" r="2.4" fill="#6E3560" stroke="none"/>
+<circle cx="170" cy="282" r="2.4" fill="#6E3560" stroke="none"/>
+<circle cx="196" cy="260" r="2.4" fill="#6E3560" stroke="none"/>
+<circle cx="216" cy="300" r="2.4" fill="#6E3560" stroke="none"/>
+<path d="M40 320 q55 -22 110 0 t110 0" stroke="#C9C7C0" stroke-width="1.5" stroke-dasharray="4 5" />
+</g>
+<text x="286" y="386" text-anchor="end" font-family="system-ui,sans-serif" font-size="11" letter-spacing="1.5" fill="#63656A" opacity=".75" style="text-transform:uppercase">PLACEHOLDER SKETCH</text>
+</svg>

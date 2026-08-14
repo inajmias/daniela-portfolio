@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Placeholder sketch — photo coming">
+<rect width="800" height="600" fill="#EFEEE9"/>
+<g fill="none" stroke-linecap="round" stroke-linejoin="round">
+<path d="M80 140 h320 v320 h-320 z" stroke="#566270" stroke-width="2.5" />
+<path d="M80 140 l44 -48 h320 l-44 48" stroke="#566270" stroke-width="2" />
+<path d="M400 140 l44 -48 v320 l-44 48" stroke="#566270" stroke-width="2" />
+<path d="M110 420 h90 v-24 h-90 z" stroke="#63656A" stroke-width="1.8" />
+<path d="M150 220 q14 -18 0 -36 M190 226 q18 -22 0 -46 M230 220 q14 -18 0 -36" stroke="#566270" stroke-width="2" />
+<path d="M520 180 h180 v130 h-180 z" stroke="#63656A" stroke-width="2" />
+<text x="536" y="212" font-family="system-ui,sans-serif" font-size="16" fill="#63656A">RH %</text>
+<path d="M536 236 h30 l18 8 22 22 24 14 h48" stroke="#566270" stroke-width="3" />
+<path d="M536 292 h164 M536 236 v56" stroke="#63656A" stroke-width="1.2" />
+<text x="700" y="330" text-anchor="end" font-family="system-ui,sans-serif" font-size="15" fill="#63656A">50% → &lt;30%</text>
+<path d="M520 360 v100 h180" stroke="#C9C7C0" stroke-width="1.5" stroke-dasharray="4 5" />
+<path d="M610 460 v-24" stroke="#63656A" stroke-width="1.5" />
+</g>
+<text x="786" y="586" text-anchor="end" font-family="system-ui,sans-serif" font-size="16" letter-spacing="1.5" fill="#63656A" opacity=".75" style="text-transform:uppercase">PLACEHOLDER SKETCH</text>
+</svg>

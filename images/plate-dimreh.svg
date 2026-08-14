@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Placeholder sketch — photo coming">
+<rect width="800" height="600" fill="#EFEEE9"/>
+<g fill="none" stroke-linecap="round" stroke-linejoin="round">
+<path d="M120 120 h560 v360 h-560 z" stroke="#63656A" stroke-width="2.5" />
+<path d="M120 300 h240 M360 120 v200 M360 380 v100 M500 300 v180 M360 300 h320" stroke="#63656A" stroke-width="2" />
+<path d="M240 300 h50 M360 340 v-20" stroke="#EFEEE9" stroke-width="4"/>
+<circle cx="240" cy="210" r="7" fill="#9A7B1F" stroke="none"/>
+<circle cx="560" cy="210" r="7" fill="#9A7B1F" stroke="none"/>
+<circle cx="240" cy="400" r="7" fill="#9A7B1F" stroke="none"/>
+<circle cx="600" cy="400" r="7" fill="#9A7B1F" stroke="none"/>
+<path d="M240 194 a22 22 0 0 1 0 -0.1 M226 196 a24 24 0 0 1 28 0" stroke="#9A7B1F" stroke-width="1.8" />
+<path d="M546 196 a24 24 0 0 1 28 0 M536 182 a38 38 0 0 1 48 0" stroke="#9A7B1F" stroke-width="1.8" />
+<path d="M226 386 a24 24 0 0 1 28 0" stroke="#9A7B1F" stroke-width="1.8" />
+<path d="M586 386 a24 24 0 0 1 28 0" stroke="#9A7B1F" stroke-width="1.8" />
+<path d="M120 90 h560" stroke="#C9C7C0" stroke-width="1.5" stroke-dasharray="4 5" />
+</g>
+<text x="786" y="586" text-anchor="end" font-family="system-ui,sans-serif" font-size="16" letter-spacing="1.5" fill="#63656A" opacity=".75" style="text-transform:uppercase">PLACEHOLDER SKETCH</text>
+</svg>

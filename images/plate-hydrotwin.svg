@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Placeholder sketch — photo coming">
+<rect width="800" height="600" fill="#EFEEE9"/>
+<g fill="none" stroke-linecap="round" stroke-linejoin="round">
+<path d="M100 120 h600 v360 h-600 z" stroke="#63656A" stroke-width="2" />
+<path d="M100 180 h600" stroke="#63656A" stroke-width="1.2" />
+<circle cx="132" cy="150" r="7" stroke="#63656A" stroke-width="1.8"/>
+<text x="152" y="156" font-family="system-ui,sans-serif" font-size="16" fill="#63656A">sensor vs. biology</text>
+<path d="M140 420 h520" stroke="#63656A" stroke-width="1.2" />
+<path d="M140 330 q80 -16 150 -6 t150 4 t150 -2" stroke="#12707C" stroke-width="3" />
+<path d="M140 330 q80 -16 150 -6 q60 8 110 34 q70 36 160 40" stroke="#63656A" stroke-width="2.5" stroke-dasharray="9 7"/>
+<circle cx="470" cy="368" r="10" stroke="#12707C" stroke-width="2.5"/>
+<path d="M470 350 v-60" stroke="#12707C" stroke-width="1.8" />
+<text x="482" y="286" font-family="system-ui,sans-serif" font-size="15" fill="#12707C">flagged</text>
+</g>
+<text x="786" y="586" text-anchor="end" font-family="system-ui,sans-serif" font-size="16" letter-spacing="1.5" fill="#63656A" opacity=".75" style="text-transform:uppercase">PLACEHOLDER SKETCH</text>
+</svg>

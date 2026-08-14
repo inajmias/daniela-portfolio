@@ -1,0 +1,1327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daniela Najmias Lang — Hardware &amp; Product Engineer</title>
+<meta name="description" content="Engineer and product builder working across robotics, climate, agritech and industrial hardware — a cancer diagnostic, an industrial humidity controller, sensor-validation ML, and more. Looking for product and hardware roles in the US, remote, or Europe.">
+<meta property="og:title" content="Daniela Najmias Lang — Hardware &amp; Product Engineer">
+<meta property="og:description" content="I like building things that don't fit neatly into one field.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://daniela-najmias.vercel.app/">
+<meta property="og:image" content="https://daniela-najmias.vercel.app/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://daniela-najmias.vercel.app/">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+<link rel="preload" href="fonts/switzer-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/switzer-600.woff2" as="font" type="font/woff2" crossorigin>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Daniela Najmias Lang",
+"jobTitle":"Hardware & Product Engineer","alumniOf":"Rice University",
+"address":{"@type":"PostalAddress","addressLocality":"Houston","addressRegion":"TX"},
+"sameAs":["https://www.linkedin.com/in/daniela-najmias-lang/"]}
+</script>
+
+<style>
+@font-face{font-family:'Switzer';src:url('fonts/switzer-400.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'Switzer';src:url('fonts/switzer-500.woff2') format('woff2');font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:'Switzer';src:url('fonts/switzer-600.woff2') format('woff2');font-weight:600;font-style:normal;font-display:swap}
+@font-face{font-family:'Switzer';src:url('fonts/switzer-700.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:'Gambetta';src:url('fonts/gambetta-400.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'Gambetta';src:url('fonts/gambetta-400-italic.woff2') format('woff2');font-weight:400;font-style:italic;font-display:swap}
+@font-face{font-family:'Gambetta';src:url('fonts/gambetta-500.woff2') format('woff2');font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:'Caveat';src:url('fonts/caveat-500.woff2') format('woff2');font-weight:500;font-style:normal;font-display:swap}
+:root{
+  --paper:#F4F3F0; --paper-2:#EAE8E3; --ink:#191A1B; --graphite:#63656A; --hair:#D2D0CA;
+  --sans:'Switzer','Schibsted Grotesk',system-ui,-apple-system,sans-serif;
+  --serif:'Gambetta','Instrument Serif',Georgia,serif;
+  --hand:'Caveat','Bradley Hand','Segoe Script',cursive;
+  --accent:var(--ink); --pad:clamp(20px,5vw,76px); --maxw:1260px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+[id]{scroll-margin-top:64px}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:17px;
+  line-height:1.58;-webkit-font-smoothing:antialiased;overflow-x:hidden;transition:background .5s ease}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition-duration:.01ms!important}}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 var(--pad)}
+body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;opacity:0;transition:opacity .5s ease;
+  background-image:linear-gradient(var(--hair) 1px,transparent 1px),linear-gradient(90deg,var(--hair) 1px,transparent 1px);
+  background-size:27px 27px}
+body.messy{background:var(--paper-2)}
+body.messy::before{opacity:.34}
+.wrap,section,footer{position:relative;z-index:1}
+
+.topbar{position:sticky;top:0;z-index:60;background:rgba(244,243,240,.87);backdrop-filter:blur(10px);
+  border-bottom:1px solid transparent;transition:border-color .3s ease,background .5s ease}
+body.messy .topbar{background:rgba(234,232,227,.87)}
+.topbar.stuck{border-bottom-color:var(--hair)}
+.topbar::after{content:'';position:absolute;left:0;bottom:-1px;height:1px;width:100%;background:var(--ink);
+  transform:scaleX(var(--prog,0));transform-origin:0 0}
+.topbar-in{display:flex;align-items:center;gap:18px;padding:14px 0}
+.sig{font-weight:600;letter-spacing:-.025em;font-size:16px}
+.topnav{display:flex;gap:18px;margin-left:auto}
+.topnav a{font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;
+  color:var(--graphite);transition:color .25s ease}
+.topnav a:hover{color:var(--ink)}
+.sw-short{display:none}
+@media (max-width:560px){
+  .sig{font-size:14px}
+  .topnav{gap:12px}
+  .topnav a[href="#end"]{display:none}
+  .sw-full{display:none}.sw-short{display:inline}
+}
+.switch{display:inline-flex;align-items:center;border:1px solid var(--ink);border-radius:100px;padding:2px;
+  background:transparent;cursor:pointer;font-family:inherit}
+.switch b{font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:6px 13px;
+  border-radius:100px;transition:background .3s ease,color .3s ease;color:var(--graphite)}
+.switch b:first-child{background:var(--ink);color:var(--paper)}
+body.messy .switch b:first-child{background:transparent;color:var(--graphite)}
+body.messy .switch b:last-child{background:var(--ink);color:var(--paper)}
+
+.open{padding:clamp(44px,8vh,96px) 0 clamp(28px,5vh,52px)}
+.open h1{margin:0 0 22px;max-width:16ch;font-size:clamp(38px,7vw,80px);line-height:.97;letter-spacing:-.04em;font-weight:600}
+.open h1 i{font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing:-.005em}
+.open .sub{max-width:58ch;font-size:clamp(17px,1.6vw,20px);color:var(--graphite);margin:0;line-height:1.55}
+.open .sub strong{color:var(--ink);font-weight:500}
+.cred{max-width:60ch;margin:22px 0 0;font-size:15.5px;color:var(--graphite);
+  border-left:2px solid var(--hair);padding-left:16px;line-height:1.55}
+.cred b{color:var(--ink);font-weight:600}
+.sixty{margin-top:26px;border:1px solid var(--hair);padding:18px 20px 14px}
+.sixty .kicker{margin:0 0 12px}
+.chips{list-style:none;display:flex;flex-wrap:wrap;gap:7px;margin:0 0 14px;padding:0}
+.chips li{font-size:13px;border:1px solid var(--hair);border-radius:100px;padding:6px 14px;color:var(--graphite)}
+.chips li b{color:var(--ink);font-weight:600;margin-right:4px}
+.sixty-actions{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:0}
+.btn-ink{background:var(--ink);color:var(--paper);text-decoration:none;padding:8px 16px;border-radius:100px;font-size:13.5px;font-weight:600}
+.btn-ink:hover{background:#000}
+.btn-line{font-size:14px;text-decoration:none;border-bottom:1px solid var(--ink);padding-bottom:2px}
+.btn-line:hover{color:var(--graphite);border-color:var(--graphite)}
+.sixty-note{font-family:var(--hand);font-size:18px;color:var(--graphite);margin:10px 0 0;transform:rotate(-.5deg)}
+.toggle-hint{font-family:var(--hand);font-size:19px;color:var(--graphite);margin:0 0 6px;text-align:right;transform:rotate(-.6deg)}
+.strip{display:grid;grid-template-columns:repeat(8,1fr);gap:clamp(6px,1.1vw,14px);margin-top:clamp(28px,4.5vh,44px)}
+.strip a{text-decoration:none;display:block}
+.strip .thumb{aspect-ratio:3/4;background:var(--paper-2);border:1px solid var(--hair);display:flex;align-items:flex-end;
+  padding:8px;overflow:hidden;transition:transform .35s cubic-bezier(.2,.7,.3,1),border-color .3s ease}
+.strip .thumb img{width:100%;height:100%;object-fit:cover}
+body.messy .strip .thumb{background:var(--paper)}
+.strip a:hover .thumb{transform:translateY(-6px);border-color:var(--tc,var(--ink))}
+.strip .thumb em{font-style:normal;font-size:10.5px;line-height:1.3;color:var(--graphite)}
+.strip .cap{font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:600;color:var(--graphite);
+  margin-top:8px;display:block;transition:color .3s ease}
+.strip a:hover .cap{color:var(--tc,var(--ink))}
+.strip-note{font-family:var(--hand);font-size:20px;color:var(--graphite);margin:16px 0 0;transform:rotate(-.7deg)}
+@media (max-width:900px){.strip{grid-template-columns:repeat(4,1fr)}}
+
+.lenses{padding:clamp(54px,9vh,100px) 0 0}
+.lede-s{font-family:var(--serif);font-size:clamp(24px,3.1vw,40px);line-height:1.18;letter-spacing:-.02em;
+  max-width:26ch;margin:0 0 30px;font-weight:400}
+.kicker{font-size:10px;letter-spacing:.17em;text-transform:uppercase;font-weight:600;color:var(--graphite);margin:0 0 20px}
+.lens-row{display:flex;flex-wrap:wrap;gap:7px;margin:0 0 18px;padding:0;list-style:none}
+.lens{font-family:inherit;font-size:11px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;padding:8px 15px;
+  border:1px solid var(--hair);border-radius:100px;background:transparent;color:var(--graphite);cursor:pointer;transition:all .25s ease}
+.lens:hover{border-color:var(--ink);color:var(--ink)}
+.lens[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+.lens-out{min-height:2.9em;color:var(--graphite);max-width:62ch;margin:0;font-size:16.5px}
+.lens-out b{color:var(--ink);font-weight:500}
+.lens-clear{font-family:inherit;font-size:11px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;
+  margin-top:12px;padding:7px 14px;border:1px solid var(--ink);border-radius:100px;background:var(--ink);
+  color:var(--paper);cursor:pointer}
+
+.work{padding:clamp(28px,5vh,52px) 0 0}
+.proj{--accent:var(--ink);padding:clamp(42px,7vh,80px) 0;border-top:1px solid var(--hair);
+  transition:opacity .4s ease,filter .4s ease,padding .5s cubic-bezier(.2,.7,.3,1)}
+.proj.dim{opacity:.45;filter:saturate(.15);padding:clamp(20px,3.5vh,34px) 0}
+.proj-body{display:grid;grid-template-rows:1fr;transition:grid-template-rows .5s cubic-bezier(.2,.7,.3,1)}
+.proj-body-in{overflow:hidden;min-height:0}
+.proj.dim .proj-body{grid-template-rows:0fr}
+.backmap{margin:44px 0 0;font-family:var(--hand);font-size:20px}
+.backmap a{text-decoration:none;color:var(--graphite)}
+.backmap a:hover{color:var(--ink)}
+@media (max-width:820px){.backmap{display:none}}
+.proj-head{display:flex;gap:18px;align-items:flex-start;margin-bottom:24px}
+.mark{flex:0 0 auto;width:52px;height:52px;border:1px solid var(--accent);border-radius:3px;display:flex;
+  align-items:center;justify-content:center;overflow:hidden;transition:background .3s ease}
+.mark img{width:100%;height:100%;object-fit:contain;padding:6px}
+.mark span{font-size:19px;font-weight:600;color:var(--accent);letter-spacing:-.03em}
+.proj:hover .mark{background:color-mix(in srgb,var(--accent) 9%,transparent)}
+@media (max-width:560px){.mark{width:42px;height:42px}.mark span{font-size:16px}}
+.meta{font-size:10px;letter-spacing:.15em;text-transform:uppercase;font-weight:600;color:var(--accent);margin:0 0 9px}
+.proj h3{margin:0 0 11px;font-size:clamp(29px,4.5vw,56px);line-height:1;letter-spacing:-.04em;font-weight:600}
+.proj h3 small{display:block;font-size:clamp(15px,1.5vw,18.5px);font-weight:400;letter-spacing:-.008em;
+  color:var(--graphite);margin-top:9px;line-height:1.4;max-width:38ch}
+.eq{list-style:none;display:flex;flex-wrap:wrap;align-items:center;gap:4px 8px;margin:0;padding:0}
+.eq li{font-size:10.5px;letter-spacing:.11em;text-transform:uppercase;font-weight:600;color:var(--graphite);transition:color .3s ease}
+.eq li::after{content:'×';margin-left:8px;color:var(--hair);font-weight:400}
+.eq li:last-child::after{display:none}
+.proj:hover .eq li{color:var(--accent)}
+.proj-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(26px,4vw,64px);align-items:start}
+.proj:nth-of-type(even) .proj-grid{direction:rtl}
+.proj:nth-of-type(even) .proj-grid > *{direction:ltr}
+@media (max-width:880px){.proj-grid{grid-template-columns:1fr;direction:ltr!important}.proj-vis{order:-1}}
+.proj p{margin:0 0 15px;max-width:55ch}
+.proj p:last-child{margin-bottom:0}
+.proj p em{font-style:normal;background:linear-gradient(transparent 62%,color-mix(in srgb,var(--accent) 24%,transparent) 0);padding:0 1px}
+
+.res{list-style:none;display:flex;flex-wrap:wrap;gap:2px 32px;margin:24px 0 0;padding:16px 0 0;border-top:1px solid var(--hair)}
+.res b{display:block;font-size:clamp(21px,2.3vw,28px);font-weight:600;letter-spacing:-.03em;color:var(--accent);line-height:1.15}
+.res span{font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--graphite);font-weight:500}
+
+/* where it went — competitions, showcases, programs, press */
+.trail{list-style:none;margin:0;padding:0}
+.trail-h{margin-top:24px;padding-top:16px;border-top:1px solid var(--hair);font-size:10px;letter-spacing:.15em;text-transform:uppercase;font-weight:600;color:var(--graphite);margin-bottom:10px}
+.trail li{display:grid;grid-template-columns:52px 1fr;gap:14px;padding:5px 0;align-items:baseline;font-size:15px}
+.trail li time{font-size:12.5px;font-weight:600;color:var(--graphite);font-variant-numeric:tabular-nums}
+.trail li.win time{color:var(--accent)}
+.trail li.win strong{font-weight:600}
+.trail li span{color:var(--graphite)}
+.trail li strong{font-weight:500;color:var(--ink)}
+.trail li a{color:var(--accent);text-decoration:none;border-bottom:1px solid color-mix(in srgb,var(--accent) 35%,transparent);
+  font-size:12.5px;margin-left:6px;white-space:nowrap}
+.trail li a:hover{border-bottom-color:var(--accent)}
+
+.links{list-style:none;display:flex;flex-wrap:wrap;gap:6px 20px;margin:20px 0 0;padding:0}
+.links a{font-size:14px;text-decoration:none;border-bottom:1px solid var(--hair);padding-bottom:2px;
+  transition:border-color .25s ease,color .25s ease}
+.links a:hover{color:var(--accent);border-bottom-color:var(--accent)}
+.links a::after{content:' ↗';color:var(--graphite);font-size:12px}
+
+.proj-vis{position:relative}
+.plate{background:var(--paper-2);border:1px solid var(--hair);aspect-ratio:4/3;display:flex;align-items:center;
+  justify-content:center;text-align:center;padding:22px;transition:transform .5s cubic-bezier(.2,.7,.3,1)}
+body.messy .plate{background:var(--paper)}
+.plate span{font-size:12.5px;line-height:1.6;color:var(--graphite);max-width:30ch}
+.plate.has-img{padding:0}
+.plate.has-img img{width:100%;height:100%;object-fit:cover}
+body.messy .proj:nth-of-type(odd) .plate{transform:rotate(-1.1deg)}
+body.messy .proj:nth-of-type(even) .plate{transform:rotate(.9deg)}
+.proj-vis figure{margin:0}
+.proj-vis figcaption{font-size:12.5px;color:var(--graphite);margin-top:9px}
+.embed{position:relative;aspect-ratio:16/9;background:var(--ink);border:1px solid var(--hair)}
+.embed iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.note{font-family:var(--hand);font-size:20px;line-height:1.25;color:var(--accent);max-width:22ch;margin:0;
+  max-height:0;overflow:hidden;opacity:0;transform:translateY(-6px) rotate(-1.4deg);
+  transition:opacity .45s ease,transform .45s ease,max-height .45s ease,margin .45s ease;pointer-events:none}
+body.messy .note{opacity:1;transform:translateY(0) rotate(-1.4deg);max-height:8em;margin-top:14px}
+.note::before{content:'↑ ';opacity:.6}
+.rough{display:grid;grid-template-rows:0fr;opacity:0;margin-top:0;
+  transition:grid-template-rows .5s cubic-bezier(.2,.7,.3,1),opacity .4s ease,margin .4s ease}
+.rough > div{overflow:hidden}
+body.messy .rough{grid-template-rows:1fr;opacity:1;margin-top:22px}
+.rough-in{border-left:2px solid var(--accent);padding:2px 0 2px 16px}
+.rough h4{margin:0 0 7px;font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;font-weight:600;color:var(--accent)}
+.rough p{color:var(--graphite);font-size:16px;margin:0 0 10px}
+.rough p:last-child{margin:0}
+.ladder{list-style:none;margin:22px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:7px;align-items:center}
+.ladder li{font-size:12px;font-weight:600;letter-spacing:.04em;padding:4px 11px;border:1px solid var(--hair);
+  border-radius:100px;color:var(--graphite)}
+.ladder li.hit{border-color:var(--accent);color:var(--accent)}
+.ladder li.aside{font-family:var(--hand);font-size:17px;font-weight:500;border:none;padding:0 4px;letter-spacing:0;
+  color:var(--accent);display:none;opacity:0;transition:opacity .4s ease}
+body.messy .ladder li.aside{display:block;opacity:1}
+
+.sim{border:1px solid var(--hair);background:var(--paper-2);padding:20px 22px;margin-top:24px}
+body.messy .sim{background:var(--paper)}
+.sim h4{margin:0 0 4px;font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;font-weight:600;color:var(--accent)}
+.sim > p{font-size:14px;color:var(--graphite);margin:0 0 16px;max-width:44ch}
+.ctrl{display:flex;align-items:center;gap:14px;margin-bottom:11px}
+.ctrl label{font-size:12.5px;font-weight:500;min-width:104px;color:var(--graphite)}
+@media (max-width:480px){.ctrl{flex-wrap:wrap}.ctrl label{min-width:100%}}
+.ctrl input[type=range]{flex:1;accent-color:var(--accent);min-width:0}
+.ctrl output{font-size:13px;font-weight:600;min-width:52px;text-align:right;font-variant-numeric:tabular-nums}
+.verdict{margin-top:15px;padding-top:14px;border-top:1px solid var(--hair);display:flex;align-items:baseline;gap:11px;flex-wrap:wrap}
+.verdict .tag{font-size:10px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;padding:4px 10px;
+  border-radius:100px;background:var(--ink);color:var(--paper)}
+.verdict.bad .tag{background:var(--accent)}
+.verdict p{font-size:14px;color:var(--graphite);margin:0;max-width:40ch}
+
+/* ─── constellation ─────────────────────────── */
+.map{margin:0 0 26px;position:relative}
+.field{width:100%;height:auto;display:block;overflow:visible}
+.field .th{stroke:var(--hair);stroke-width:1;opacity:.5;transition:opacity .35s ease,stroke .35s ease}
+.field .disc{font-family:var(--sans);font-size:15px;font-weight:600;letter-spacing:.02em;fill:var(--ink);
+  cursor:pointer;transition:fill .3s ease,opacity .3s ease}
+.field .disc:hover{fill:var(--graphite)}
+.field .dot{fill:var(--lc);transition:r .3s ease,opacity .3s ease}
+.field .halo{fill:var(--lc);opacity:0;transition:opacity .35s ease}
+.field .nm{font-family:var(--sans);font-size:13px;font-weight:500;fill:var(--graphite);
+  letter-spacing:-.01em;transition:fill .3s ease,opacity .3s ease}
+.field .node{cursor:pointer}
+.field .node:focus-visible .halo,.field .node:hover .halo{opacity:.13}
+/* focus + dim states */
+.field.busy .th{opacity:.09}
+.field.busy .disc{opacity:.3}
+.field.busy .nm{opacity:.28}
+.field.busy .dot{opacity:.28}
+.field .th.lit{opacity:1;stroke:var(--lc);stroke-width:1.4}
+.field .disc.lit{opacity:1;fill:var(--ink)}
+.field .node.lit .nm{opacity:1;fill:var(--ink)}
+.field .node.lit .dot{opacity:1;r:7}
+.field .node.lit .halo{opacity:.13}
+.field .disc.held{opacity:1;fill:var(--ink);text-decoration:underline;text-underline-offset:5px}
+.map-hint{font-family:var(--hand);font-size:19px;color:var(--graphite);margin:0;transform:rotate(-.5deg)}
+@media (max-width:820px){.map{display:none}}
+.lens-row{display:none}
+@media (max-width:820px){.lens-row{display:flex}}
+
+/* ─── hanging year ──────────────────────────── */
+.proj-head{display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:start}
+.stack{display:flex;flex-direction:column;align-items:center;gap:9px}
+.yr{font-family:var(--serif);font-size:clamp(15px,1.5vw,19px);color:var(--graphite);
+  letter-spacing:-.01em;white-space:nowrap;font-style:italic}
+
+/* ─── places timeline ───────────────────────── */
+.route li time{display:block;font-family:var(--serif);font-size:15px;font-style:italic;
+  color:var(--graphite);margin-bottom:1px}
+.route li.back::before{background:var(--pc);border-color:var(--pc)}
+
+.method{padding:clamp(62px,10vh,120px) 0;border-top:1px solid var(--hair)}
+.chain{list-style:none;margin:0 0 46px;padding:0;display:flex;flex-wrap:wrap;gap:5px 3px;align-items:baseline}
+.chain li{font-size:clamp(19px,2.5vw,32px);font-weight:600;letter-spacing:-.03em}
+.chain li::after{content:'→';color:var(--hair);margin:0 10px 0 8px;font-weight:400}
+.chain li:last-child::after{display:none}
+.chain li:nth-child(even){font-family:var(--serif);font-weight:400;font-style:italic;letter-spacing:-.01em}
+.ask{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:clamp(20px,3vw,40px);
+  border-top:1px solid var(--hair);padding-top:34px}
+.ask div p:first-child{font-family:var(--serif);font-size:clamp(21px,2.3vw,28px);margin:0 0 8px;letter-spacing:-.015em}
+.ask div p:last-child{margin:0;font-size:15.5px;color:var(--graphite)}
+
+.places{padding:clamp(62px,10vh,120px) 0;border-top:1px solid var(--hair)}
+.route{list-style:none;margin:34px 0 0;padding:0;position:relative}
+.route::before{content:'';position:absolute;left:6px;top:10px;bottom:10px;width:1px;
+  background:repeating-linear-gradient(var(--hair) 0 5px,transparent 5px 10px)}
+.route li{position:relative;padding:0 0 26px 34px}
+.route li:last-child{padding-bottom:0}
+.route li::before{content:'';position:absolute;left:0;top:8px;width:13px;height:13px;border-radius:50%;
+  border:1px solid var(--ink);background:var(--paper);transition:background .3s ease,border-color .3s ease}
+.route li:hover::before{background:var(--pc,var(--ink));border-color:var(--pc,var(--ink))}
+.route h4{margin:0 0 2px;font-size:19px;font-weight:600;letter-spacing:-.02em}
+.route h4 span{font-size:12px;font-weight:500;color:var(--graphite);letter-spacing:.05em;margin-left:9px}
+.route p{margin:0;color:var(--graphite);max-width:56ch;font-size:16px}
+
+.about{padding:clamp(62px,10vh,120px) 0;border-top:1px solid var(--hair)}
+.frags{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:clamp(26px,3.4vw,52px);margin-top:34px}
+.frag p:first-child{font-size:clamp(19px,2vw,24px);font-weight:600;letter-spacing:-.025em;margin:0 0 9px}
+.frag p:last-child{margin:0;color:var(--graphite);font-size:16px}
+.frag:nth-child(2) p:first-child,.frag:nth-child(4) p:first-child{font-family:var(--serif);font-weight:400;font-style:italic;letter-spacing:-.01em}
+.cv{margin-top:56px;border-top:1px solid var(--hair);padding-top:34px;
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:clamp(22px,3vw,44px)}
+.cv h5{margin:0 0 12px;font-size:10px;letter-spacing:.15em;text-transform:uppercase;font-weight:600;color:var(--graphite)}
+.cv ul{list-style:none;margin:0;padding:0}
+.cv li{font-size:15px;padding:5px 0;border-bottom:1px solid var(--hair)}
+.cv li:last-child{border:none}
+.cv li em{font-style:normal;display:block;color:var(--graphite);font-size:13px}
+
+.end{padding:clamp(62px,10vh,120px) 0 clamp(38px,6vh,68px);border-top:1px solid var(--hair)}
+.end h2{font-size:clamp(30px,5vw,64px);line-height:1;letter-spacing:-.04em;font-weight:600;margin:0 0 26px;max-width:16ch}
+.end h2 i{font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing:-.01em}
+.reach{display:flex;flex-wrap:wrap;gap:12px 32px;align-items:baseline;margin:0 0 26px;padding:0;list-style:none}
+.reach a{font-size:18px;text-decoration:none;border-bottom:1px solid var(--ink);padding-bottom:2px}
+.reach a:hover{color:var(--graphite);border-color:var(--graphite)}
+.aside-note{border-left:2px solid var(--hair);padding-left:16px;max-width:54ch;color:var(--graphite);font-size:16px;margin:0}
+footer{padding:24px 0 44px;font-size:12.5px;color:var(--graphite);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.up{opacity:0;transform:translateY(16px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.3,1)}
+.up.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.up{opacity:1;transform:none}}
+
+/* ─── SORT IT — the Compocycler game ────────── */
+#arcade{position:fixed;inset:0;z-index:100;background:var(--paper);display:flex;
+  align-items:center;justify-content:center;overflow:hidden}
+#arcade[hidden]{display:none}
+#arcade [hidden]{display:none!important}
+body.arcade-lock{overflow:hidden}
+.arcade-skip{position:absolute;top:16px;left:18px;z-index:5;font-family:var(--hand);font-size:19px;
+  color:var(--graphite);text-decoration:none;transform:rotate(-.6deg)}
+.arcade-skip:hover{color:var(--ink)}
+.ac-stage,.ac-game,.ac-payoff{display:flex;flex-direction:column;align-items:center;
+  justify-content:center;gap:14px;width:100%;height:100%;padding:20px}
+.ac-stage{position:relative}
+#acResume{width:64px;position:absolute;top:-90px;left:50%;transform:translateX(-50%)}
+#acBin{width:min(220px,44vw)}
+.ac-note{font-family:var(--hand);font-size:clamp(21px,2.6vw,27px);line-height:1.3;color:var(--ink);
+  text-align:center;max-width:30ch;margin:0;transform:rotate(-.5deg);opacity:0}
+.ac-actions{display:flex;gap:14px;align-items:center;flex-wrap:wrap;justify-content:center}
+.ac-stage .ac-actions{opacity:0}
+.ac-game{gap:8px}
+#acCanvasBox{flex:none;width:min(94vw,700px,calc(66vh * 720 / 560));aspect-ratio:720/560;border:1px solid var(--hair);background:var(--paper)}
+#acCanvasBox canvas{display:block}
+.ac-era{font-size:11px;letter-spacing:.15em;text-transform:uppercase;font-weight:600;color:var(--graphite);margin:0}
+.ac-msg{font-family:var(--hand);font-size:22px;color:#6B7F2A;margin:0;min-height:1.4em;transform:rotate(-.4deg)}
+.ac-hint{font-size:13px;color:var(--graphite);margin:0}
+.ac-card{background:var(--paper);border:1px solid var(--hair);max-width:520px;padding:30px 34px;
+  text-align:left;box-shadow:0 18px 50px rgba(25,26,27,.08)}
+.ac-card h2{font-size:clamp(26px,3.4vw,34px);line-height:1.05;letter-spacing:-.03em;margin:8px 0 10px}
+.ac-card > p{color:var(--graphite);margin:0 0 12px;font-size:16px}
+.ac-tag{font-family:var(--hand);font-size:21px;color:var(--ink);line-height:1.3;transform:rotate(-.4deg)}
+.ac-foot{font-family:var(--hand);font-size:17px;color:var(--graphite);margin:10px 0 0}
+.play-note{font-family:var(--hand);font-size:20px;margin:16px 0 0;transform:rotate(-.5deg)}
+.play-note a{color:#6B7F2A;text-decoration:none;border-bottom:1px solid color-mix(in srgb,#6B7F2A 40%,transparent)}
+.play-note a:hover{border-bottom-color:#6B7F2A}
+</style>
+</head>
+<body>
+
+<div id="arcade" hidden>
+  <a class="arcade-skip" href="#" id="arcadeSkip">skip the game — quiet version ↓</a>
+  <div class="ac-stage" id="acStage">
+    <img id="acResume" src="images/game/resume-item.svg" alt="" aria-hidden="true">
+    <img id="acBin" src="images/game/bin-era1.svg" alt="" aria-hidden="true">
+    <p class="ac-note" id="acNote">she's been rebuilding this machine since 2017.<br>your resume is compost now — play for it?</p>
+    <div class="ac-actions">
+      <button class="btn-ink" id="acPlay" type="button">Play</button>
+    </div>
+  </div>
+  <div class="ac-game" id="acGame" hidden>
+    <div id="acCanvasBox"><canvas id="acCanvas" aria-hidden="true"></canvas></div>
+    <p class="ac-era" id="acEra">2017 · the science-fair build</p>
+    <p class="ac-msg" id="acMsg"></p>
+    <p class="ac-hint">← plastics get compacted · organics get composted → &nbsp;(tap a side or use arrow keys)</p>
+  </div>
+  <div class="ac-payoff" id="acPayoff" hidden>
+    <div class="ac-card" id="acCard">
+      <p class="meta" style="--accent:#6B7F2A">The Compocycler — real machine, real history</p>
+      <h2>Nine years. Seven contexts. Still shipping versions.</h2>
+      <p>Solar powered · compacts plastic on one side, accelerates decomposition on the other · sensors · companion app. National Science Fair first place; Diamond Challenge runner-up.</p>
+      <p class="ac-tag">“that's the job — work out how it behaves, then make it behave. you just did it.”</p>
+      <div class="ac-actions">
+        <a class="btn-ink" href="resume.pdf">Résumé (PDF)</a>
+        <button class="btn-line" id="acDone" type="button">continue to the quiet version ↓</button>
+      </div>
+      <p class="ac-foot">↑ the uncomposted original</p>
+    </div>
+  </div>
+</div>
+
+<div class="topbar" id="topbar">
+  <div class="wrap topbar-in">
+    <div class="sig">Daniela Najmias Lang</div>
+    <nav class="topnav" aria-label="Quick links">
+      <a href="resume.pdf">Résumé</a>
+      <a href="#end">Contact</a>
+    </nav>
+    <button class="switch" id="switch" aria-pressed="false" aria-label="Switch between finished work and the messy part">
+      <b>Final</b><b><span class="sw-full">The messy part</span><span class="sw-short">Messy</span></b>
+    </button>
+  </div>
+</div>
+
+<main>
+
+<!-- ════════ OPENING ════════ -->
+<section class="open">
+  <div class="wrap">
+    <p class="toggle-hint">flip “the messy part” ↗ for what broke first</p>
+    <h1>I like building things that don't fit <i>neatly</i> into one field.</h1>
+    <p class="sub">A cancer diagnostic. An industrial humidity controller. A compost machine I've been rebuilding since 2017. A greenhouse that argues with its own sensors. Two emergency devices from a Costa Rican high school. <strong>Same job every time:</strong> work out how it behaves, then make it behave.</p>
+    <p class="note">none of it looked like this at the start</p>
+    <p class="cred"><b>Master of Bioengineering in Applied Bioengineering</b>, Rice '26 · Christiaan Scholtz Award — the department's top graduating master's student.</p>
+
+    <div class="sixty">
+      <h2 class="kicker">The 60-second version</h2>
+      <ul class="chips">
+        <li><b>Looking for</b> product &amp; hardware roles — robotics, climate, agritech, industrial</li>
+        <li><b>Where</b> Houston · Bay Area · Boston · LA · remote · Europe</li>
+        <li><b>US</b> work-authorized, no H-1B sponsorship needed</li>
+        <li><b>EU</b> citizen</li>
+        <li><b>Start</b> two weeks from offer</li>
+      </ul>
+      <p class="sixty-actions"><a class="btn-ink" href="resume.pdf">Résumé (PDF)</a> <a class="btn-line" href="mailto:daniela@dnlventures.tech">daniela@dnlventures.tech</a></p>
+      <p class="sixty-note">that's the screening call, skipped</p>
+      <p class="play-note"><a href="#" id="acReplayHero">or play SORT IT — her compost robot ate your resume ↗</a></p>
+    </div>
+
+    <!-- Photos: replace <em>…</em> with <img src="images/x.jpg" alt="…"> -->
+    <div class="strip">
+      <a href="#orcade" style="--tc:#A5342C"><div class="thumb"><img src="images/thumb-orcade.svg" alt="Placeholder sketch — ORCADE brush biopsy device" loading="lazy"></div><span class="cap">Diagnostic</span></a>
+      <a href="#restore" style="--tc:#566270"><div class="thumb"><img src="images/thumb-restore.svg" alt="Placeholder sketch — industrial printer humidity rig" loading="lazy"></div><span class="cap">Industrial</span></a>
+      <a href="#hydrotwin" style="--tc:#12707C"><div class="thumb"><img src="images/thumb-hydrotwin.svg" alt="Placeholder sketch — greenhouse with a sensor stake" loading="lazy"></div><span class="cap">Agritech</span></a>
+      <a href="#compocycler" style="--tc:#6B7F2A"><div class="thumb"><img src="images/thumb-compocycler.svg" alt="Placeholder sketch — solar composting bin" loading="lazy"></div><span class="cap">Waste</span></a>
+      <a href="#acqualizer" style="--tc:#3448A0"><div class="thumb"><img src="images/thumb-acqualizer.svg" alt="Placeholder sketch — industrial mixer with streamlines" loading="lazy"></div><span class="cap">Mechanical</span></a>
+      <a href="#bcarbon" style="--tc:#6E3560"><div class="thumb"><img src="images/thumb-bcarbon.svg" alt="Placeholder sketch — LiDAR scan over forest canopy" loading="lazy"></div><span class="cap">Climate</span></a>
+      <a href="#salvas" style="--tc:#C0621B"><div class="thumb"><img src="images/thumb-salvas.svg" alt="Placeholder sketch — seismic trace and locator ping" loading="lazy"></div><span class="cap">Disaster</span></a>
+      <a href="#dimreh" style="--tc:#9A7B1F"><div class="thumb"><img src="images/thumb-dimreh.svg" alt="Placeholder sketch — house with alert sensor" loading="lazy"></div><span class="cap">Safety</span></a>
+    </div>
+    <p class="strip-note">yes — same person</p>
+  </div>
+</section>
+
+<!-- ════════ LENSES ════════ -->
+<section class="lenses">
+  <div class="wrap">
+    <h2 class="kicker">Eight projects, placed between the disciplines they draw on</h2>
+    <div class="map">
+<svg class="field" id="field" viewBox="0 0 1000 580" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Map of eight projects positioned between the disciplines they draw on">
+<g class="threads">
+<line class="th" data-p="orcade" data-d="bio" x1="628" y1="172" x2="906" y2="318" style="--lc:#A5342C"/>
+<line class="th" data-p="orcade" data-d="product" x1="628" y1="172" x2="430" y2="48" style="--lc:#A5342C"/>
+<line class="th" data-p="orcade" data-d="hardware" x1="628" y1="172" x2="102" y2="98" style="--lc:#A5342C"/>
+<line class="th" data-p="orcade" data-d="venture" x1="628" y1="172" x2="398" y2="548" style="--lc:#A5342C"/>
+<line class="th" data-p="restore" data-d="hardware" x1="248" y1="150" x2="102" y2="98" style="--lc:#566270"/>
+<line class="th" data-p="restore" data-d="product" x1="248" y1="150" x2="430" y2="48" style="--lc:#566270"/>
+<line class="th" data-p="restore" data-d="field" x1="248" y1="150" x2="84" y2="262" style="--lc:#566270"/>
+<line class="th" data-p="hydrotwin" data-d="ml" x1="692" y1="398" x2="852" y2="105" style="--lc:#12707C"/>
+<line class="th" data-p="hydrotwin" data-d="bio" x1="692" y1="398" x2="906" y2="318" style="--lc:#12707C"/>
+<line class="th" data-p="hydrotwin" data-d="sustainability" x1="692" y1="398" x2="90" y2="432" style="--lc:#12707C"/>
+<line class="th" data-p="hydrotwin" data-d="venture" x1="692" y1="398" x2="398" y2="548" style="--lc:#12707C"/>
+<line class="th" data-p="compocycler" data-d="hardware" x1="302" y1="404" x2="102" y2="98" style="--lc:#6B7F2A"/>
+<line class="th" data-p="compocycler" data-d="sustainability" x1="302" y1="404" x2="90" y2="432" style="--lc:#6B7F2A"/>
+<line class="th" data-p="compocycler" data-d="bio" x1="302" y1="404" x2="906" y2="318" style="--lc:#6B7F2A"/>
+<line class="th" data-p="compocycler" data-d="venture" x1="302" y1="404" x2="398" y2="548" style="--lc:#6B7F2A"/>
+<line class="th" data-p="acqualizer" data-d="hardware" x1="432" y1="192" x2="102" y2="98" style="--lc:#3448A0"/>
+<line class="th" data-p="acqualizer" data-d="product" x1="432" y1="192" x2="430" y2="48" style="--lc:#3448A0"/>
+<line class="th" data-p="acqualizer" data-d="venture" x1="432" y1="192" x2="398" y2="548" style="--lc:#3448A0"/>
+<line class="th" data-p="bcarbon" data-d="sustainability" x1="214" y1="296" x2="90" y2="432" style="--lc:#6E3560"/>
+<line class="th" data-p="bcarbon" data-d="field" x1="214" y1="296" x2="84" y2="262" style="--lc:#6E3560"/>
+<line class="th" data-p="bcarbon" data-d="ml" x1="214" y1="296" x2="852" y2="105" style="--lc:#6E3560"/>
+<line class="th" data-p="salvas" data-d="hardware" x1="502" y1="456" x2="102" y2="98" style="--lc:#C0621B"/>
+<line class="th" data-p="salvas" data-d="field" x1="502" y1="456" x2="84" y2="262" style="--lc:#C0621B"/>
+<line class="th" data-p="salvas" data-d="safety" x1="502" y1="456" x2="806" y2="540" style="--lc:#C0621B"/>
+<line class="th" data-p="salvas" data-d="venture" x1="502" y1="456" x2="398" y2="548" style="--lc:#C0621B"/>
+<line class="th" data-p="dimreh" data-d="hardware" x1="802" y1="236" x2="102" y2="98" style="--lc:#9A7B1F"/>
+<line class="th" data-p="dimreh" data-d="safety" x1="802" y1="236" x2="806" y2="540" style="--lc:#9A7B1F"/>
+<line class="th" data-p="dimreh" data-d="product" x1="802" y1="236" x2="430" y2="48" style="--lc:#9A7B1F"/>
+<line class="th" data-p="dimreh" data-d="bio" x1="802" y1="236" x2="906" y2="318" style="--lc:#9A7B1F"/>
+</g>
+<g class="discs">
+<text class="disc" data-d="product" x="430" y="48" text-anchor="middle" tabindex="0" role="button" aria-label="Filter by Product">Product</text>
+<text class="disc" data-d="hardware" x="102" y="98" text-anchor="start" tabindex="0" role="button" aria-label="Filter by Hardware">Hardware</text>
+<text class="disc" data-d="ml" x="852" y="105" text-anchor="end" tabindex="0" role="button" aria-label="Filter by Machine learning">Machine learning</text>
+<text class="disc" data-d="field" x="84" y="262" text-anchor="start" tabindex="0" role="button" aria-label="Filter by Field work">Field work</text>
+<text class="disc" data-d="bio" x="906" y="318" text-anchor="end" tabindex="0" role="button" aria-label="Filter by Biology">Biology</text>
+<text class="disc" data-d="sustainability" x="90" y="432" text-anchor="start" tabindex="0" role="button" aria-label="Filter by Sustainability">Sustainability</text>
+<text class="disc" data-d="venture" x="398" y="548" text-anchor="middle" tabindex="0" role="button" aria-label="Filter by Commercial">Commercial</text>
+<text class="disc" data-d="safety" x="806" y="540" text-anchor="end" tabindex="0" role="button" aria-label="Filter by Emergency & safety">Emergency &amp; safety</text>
+</g>
+<g class="nodes">
+<g class="node" data-p="orcade" style="--lc:#A5342C" tabindex="0" role="button" aria-label="ORCADE">
+<circle class="halo" cx="628" cy="172" r="17"/>
+<circle class="dot" cx="628" cy="172" r="5.5"/>
+<text class="nm" x="628" y="196" text-anchor="middle">ORCADE</text>
+</g>
+<g class="node" data-p="restore" style="--lc:#566270" tabindex="0" role="button" aria-label="re:store">
+<circle class="halo" cx="248" cy="150" r="17"/>
+<circle class="dot" cx="248" cy="150" r="5.5"/>
+<text class="nm" x="248" y="174" text-anchor="middle">re:store</text>
+</g>
+<g class="node" data-p="hydrotwin" style="--lc:#12707C" tabindex="0" role="button" aria-label="HydroTwin">
+<circle class="halo" cx="692" cy="398" r="17"/>
+<circle class="dot" cx="692" cy="398" r="5.5"/>
+<text class="nm" x="692" y="422" text-anchor="middle">HydroTwin</text>
+</g>
+<g class="node" data-p="compocycler" style="--lc:#6B7F2A" tabindex="0" role="button" aria-label="Compocycler">
+<circle class="halo" cx="302" cy="404" r="17"/>
+<circle class="dot" cx="302" cy="404" r="5.5"/>
+<text class="nm" x="302" y="428" text-anchor="middle">Compocycler</text>
+</g>
+<g class="node" data-p="acqualizer" style="--lc:#3448A0" tabindex="0" role="button" aria-label="Acqualizer">
+<circle class="halo" cx="432" cy="192" r="17"/>
+<circle class="dot" cx="432" cy="192" r="5.5"/>
+<text class="nm" x="432" y="216" text-anchor="middle">Acqualizer</text>
+</g>
+<g class="node" data-p="bcarbon" style="--lc:#6E3560" tabindex="0" role="button" aria-label="BCarbon">
+<circle class="halo" cx="214" cy="296" r="17"/>
+<circle class="dot" cx="214" cy="296" r="5.5"/>
+<text class="nm" x="214" y="320" text-anchor="middle">BCarbon</text>
+</g>
+<g class="node" data-p="salvas" style="--lc:#C0621B" tabindex="0" role="button" aria-label="SALVAS">
+<circle class="halo" cx="502" cy="456" r="17"/>
+<circle class="dot" cx="502" cy="456" r="5.5"/>
+<text class="nm" x="502" y="480" text-anchor="middle">SALVAS</text>
+</g>
+<g class="node" data-p="dimreh" style="--lc:#9A7B1F" tabindex="0" role="button" aria-label="DIMREH">
+<circle class="halo" cx="802" cy="236" r="17"/>
+<circle class="dot" cx="802" cy="236" r="5.5"/>
+<text class="nm" x="802" y="260" text-anchor="middle">DIMREH</text>
+</g>
+</g></svg>
+      <p class="map-hint">hover anything — click a discipline to filter</p>
+    </div>
+    <div class="lens-row" role="group" aria-label="Filter projects by discipline">
+      <button class="lens" data-lens="hardware" aria-pressed="false">Hardware</button>
+      <button class="lens" data-lens="ml" aria-pressed="false">Machine learning</button>
+      <button class="lens" data-lens="sustainability" aria-pressed="false">Sustainability</button>
+      <button class="lens" data-lens="product" aria-pressed="false">Product</button>
+      <button class="lens" data-lens="bio" aria-pressed="false">Biology</button>
+      <button class="lens" data-lens="venture" aria-pressed="false">Commercial</button>
+      <button class="lens" data-lens="field" aria-pressed="false">Field work</button>
+      <button class="lens" data-lens="safety" aria-pressed="false">Emergency &amp; safety</button>
+    </div>
+    <p class="lens-out" id="lensOut">Pick one and the set rearranges itself. Nothing here belongs to a single column.</p>
+    <button class="lens-clear" id="clearLens" hidden>× clear filter</button>
+  </div>
+</section>
+
+<!-- ════════ WORK ════════ -->
+<section class="work">
+  <div class="wrap">
+
+    <!-- ORCADE -->
+    <article class="proj up" id="orcade" style="--accent:#A5342C" data-lens="bio product hardware venture">
+      <div class="proj-head">
+        <!-- Logo: <span class="mark"><img src="logos/orcade.svg" alt="ORCADE"></span> -->
+        <div class="stack"><span class="mark"><span>O</span></span><span class="yr">2024 –</span></div>
+        <div>
+          <p class="meta">2024 – present · sponsored by MD Anderson Cancer Center</p>
+          <h3>ORCADE<small>Oral Cancer Diagnostic Evaluator — a brush that has to collect a genome without cutting anyone</small></h3>
+          <ul class="eq"><li>Bioengineering</li><li>Product design</li><li>Clinical need</li><li>Entrepreneurship</li></ul>
+        </div>
+      </div>
+      <div class="proj-body"><div class="proj-body-in">
+      <div class="proj-grid">
+        <div>
+          <p>Finding oral cancer early currently involves a scalpel, so people put it off. ORCADE is a brush instead — a geometry problem: bristle stiffness, density, how hard you can press before it stops being non-invasive. Printed, tested, reprinted until <em>the yield doubled</em>. Validated from cell culture to human clinical protocol; provisional patent filed.</p>
+
+          <ul class="res">
+            <li><b>550 ng</b><span>DNA per sample</span></li>
+            <li><b>1.92</b><span>Purity</span></li>
+            <li><b>2×</b><span>Yield vs. current tools</span></li>
+          </ul>
+
+          <p class="trail-h">Where it went</p>
+            <ul class="trail">
+            <li class="win"><time>2025</time><span><strong>"Most Likely to Problem Solve in Style"</strong> — Rice Bioengineering capstone award</span></li>
+            <li><time>2025</time><span>Rice Launchpad program</span></li>
+          </ul>
+        </div>
+        <div class="proj-vis">
+          <div class="plate has-img"><img src="images/plate-orcade.svg" alt="Placeholder sketch — four brush geometries, earliest to last" loading="lazy"></div>
+          <p class="note">the one on the left was a disaster</p>
+        </div>
+      </div>
+      </div></div>
+    </article>
+
+    <!-- re:store -->
+    <article class="proj up" id="restore" style="--accent:#566270" data-lens="hardware product field">
+      <div class="proj-head">
+        <div class="stack"><span class="mark"><span>R</span></span><span class="yr">2022</span></div>
+        <div>
+          <p class="meta">2022 · re:3D, Houston · NASA-contractor manufacturing</p>
+          <h3>re:store<small>Humidity, and why the printed parts kept snapping</small></h3>
+          <ul class="eq"><li>Sensors</li><li>Embedded control</li><li>Manufacturing</li><li>Houston weather</li></ul>
+        </div>
+      </div>
+      <div class="proj-body"><div class="proj-body-in">
+      <div class="proj-grid">
+        <div>
+          <p>The printers were turning out brittle parts and everyone was looking at the machines. It was the air — Houston humidity soaks into filament on the shelf. I built the room a nervous system: sensing, automated dehumidification, a touchscreen, Arduino underneath. <em>Filament humidity went from ~50% to under 30%, and stayed there.</em></p>
+
+          <ul class="res">
+            <li><b>50% → &lt;30%</b><span>Filament humidity</span></li>
+            <li><b>Closed loop</b><span>Sense and act, no operator</span></li>
+          </ul>
+          <p class="trail-h">Where it went</p>
+            <ul class="trail">
+            <li><time>2022</time><span>Engineering Design Showcase, Rice</span></li>
+          </ul>
+        </div>
+        <div class="proj-vis">
+          <div class="plate has-img"><img src="images/plate-restore.svg" alt="Placeholder sketch — printer enclosure and touchscreen readout" loading="lazy"></div>
+          <p class="note">held together with zip ties for about a month</p>
+        </div>
+      </div>
+      </div></div>
+    </article>
+
+    <!-- HydroTwin -->
+    <article class="proj up" id="hydrotwin" style="--accent:#12707C" data-lens="ml bio sustainability venture">
+      <div class="proj-head">
+        <div class="stack"><span class="mark"><span>H</span></span><span class="yr">2026 –</span></div>
+        <div>
+          <p class="meta">2026 – present · Founder &amp; CEO</p>
+          <h3>HydroTwin<small>What if the plants are a better sensor than the sensors?</small></h3>
+          <ul class="eq"><li>Machine learning</li><li>Plant biology</li><li>IoT infrastructure</li><li>Agriculture</li></ul>
+        </div>
+      </div>
+      <div class="proj-body"><div class="proj-body-in">
+      <div class="proj-grid">
+        <div>
+          <p>Growers trust their probes right up until one drifts for three weeks and takes a crop cycle with it. HydroTwin flips the witness: plants respond to the actual environment, so when biology and sensor disagree, <em>the sensor is the thing under suspicion.</em> Random Forest + Isolation Forest, residual logic in between, a dashboard on top.</p>
+
+          <div class="sim">
+            <h4>Try the idea</h4>
+            <p>Set what the sensor is reporting, then what the plants are actually doing. The gap is the signal.</p>
+            <div class="ctrl"><label for="s1">Sensor says</label><input type="range" id="s1" min="18" max="34" value="24" step="0.5"><output id="o1">24.0 °C</output></div>
+            <div class="ctrl"><label for="s2">Plants behave like</label><input type="range" id="s2" min="18" max="34" value="24" step="0.5"><output id="o2">24.0 °C</output></div>
+            <div class="verdict" id="verdict">
+              <span class="tag" id="vtag">Agreement</span>
+              <p id="vtext">Residual within tolerance. The probe is telling the truth.</p>
+            </div>
+          </div>
+
+        </div>
+        <div class="proj-vis">
+          <div class="plate has-img"><img src="images/plate-hydrotwin.svg" alt="Placeholder sketch — dashboard where sensor and biology diverge" loading="lazy"></div>
+          <p class="note">first model flagged everything as an anomaly</p>
+        </div>
+      </div>
+      </div></div>
+    </article>
+
+    <!-- Compocycler -->
+    <article class="proj up" id="compocycler" style="--accent:#6B7F2A" data-lens="hardware sustainability bio venture">
+      <div class="proj-head">
+        <div class="stack"><span class="mark"><span>C</span></span><span class="yr">2017 –</span></div>
+        <div>
+          <p class="meta">2017 – present · nine years, seven contexts, still going</p>
+          <h3>The Compocycler<small>A bin that composts, compacts, and refuses to be finished</small></h3>
+          <ul class="eq"><li>Hardware</li><li>Microbiology</li><li>Solar</li><li>IoT</li><li>Stubbornness</li></ul>
+        </div>
+      </div>
+      <div class="proj-body"><div class="proj-body-in">
+      <div class="proj-grid">
+        <div>
+          <p>Solar powered; compacts plastic on one side, accelerates decomposition on the other. Started as a Costa Rican science fair project in 2017 — <em>nine years and seven contexts later, I'm still shipping versions.</em> The clearest evidence of the thing that's hardest to put on a resume: I don't stop when the deadline that created something has passed.</p>
+
+          <ul class="ladder">
+            <li>v1</li><li>v2</li><li>v3</li><li>v4</li><li class="aside">↖ this is where it got embarrassing</li><li>v5</li><li class="hit">BioBoost</li>
+          </ul>
+
+          <p class="play-note"><a href="#" id="acReplay">play SORT IT — this machine vs. your resume ↗</a></p>
+
+          <p class="trail-h">Where it went</p>
+            <ul class="trail">
+            <li><time>2025</time><span><strong>BioBoost edition</strong> — Biomanufacturing, Sustainability &amp; Bioeconomy, Rice</span></li>
+            <li class="win"><time>2019</time><span><strong>Second place</strong> — Diamond Challenge social entrepreneurship, Costa Rica <a href="https://www.facebook.com/leaduniversitycr/photos/pcb.848288958850617/848287508850762/" target="_blank" rel="noopener">press ↗</a></span></li>
+            <li class="win"><time>2017 · 19</time><span><strong>First place, technological research &amp; development</strong> — Costa Rica National Science Fair</span></li>
+          </ul>
+
+        </div>
+        <div class="proj-vis">
+          <div class="plate has-img"><img src="images/plate-compocycler.svg" alt="Placeholder sketch — early bin next to the current solar build" loading="lazy"></div>
+          <p class="note">version 2 is in a garage in San José</p>
+        </div>
+      </div>
+      </div></div>
+    </article>
+
+    <!-- Acqualizer -->
+    <article class="proj up" id="acqualizer" style="--accent:#3448A0" data-lens="hardware product venture">
+      <div class="proj-head">
+        <div class="stack"><span class="mark"><span>A</span></span><span class="yr">2024–25</span></div>
+        <div>
+          <p class="meta">2024 – 2025 · began in Bologna, Italy</p>
+          <h3>Acqualizer<small>From Italy to industry — rethinking liquid mixing through simulation of mechanically assembled systems</small></h3>
+          <ul class="eq"><li>Fluid dynamics</li><li>Mechanical design</li><li>Process equipment</li><li>Simulation</li></ul>
+        </div>
+      </div>
+      <div class="proj-body"><div class="proj-body-in">
+      <div class="proj-grid">
+        <div>
+          <p>Bologna's automated food machinery is beautiful and slightly deceptive: the mechanism is the visible part, but what the fluid does inside decides whether it works. Acqualizer models that — an industrial mixer in SolidWorks, flow simulation through it, <em>the same question extended to bioreactors, formulation, and chemical processing.</em></p>
+
+          <p class="trail-h">Where it went</p>
+            <ul class="trail">
+            <li><time>2025</time><span>Huff OEDK Engineering Design Showcase, Rice — as an independent project <a href="https://oedk.rice.edu/teams-details?recordId=recTdUGbCp0SqGSBI" target="_blank" rel="noopener">project page ↗</a></span></li>
+          </ul>
+          <ul class="links">
+            <li><a href="https://youtu.be/mJMd9Fur9iU" target="_blank" rel="noopener">Watch the demonstration</a></li>
+            <li><a href="https://www.youtube.com/watch?v=4aNs-w1eMM0" target="_blank" rel="noopener">Watch the pitch</a></li>
+            <li><a href="https://drive.google.com/file/d/1-itc-8k0k0d9zHeb9C7Zg9y_lsbfyYT4/view" target="_blank" rel="noopener">Read the paper</a></li>
+          </ul>
+        </div>
+        <div class="proj-vis">
+          <figure>
+            <div class="embed">
+              <iframe src="https://www.youtube-nocookie.com/embed/mJMd9Fur9iU" title="Acqualizer demonstration" loading="lazy" allow="encrypted-media; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <figcaption>Acqualizer, demonstrated</figcaption>
+          </figure>
+        </div>
+      </div>
+      </div></div>
+    </article>
+
+    <!-- BCarbon -->
+    <article class="proj up" id="bcarbon" style="--accent:#6E3560" data-lens="sustainability field ml">
+      <div class="proj-head">
+        <div class="stack"><span class="mark"><span>B</span></span><span class="yr">2025</span></div>
+        <div>
+          <p class="meta">2025 · with BCarbon · Peruvian Amazon</p>
+          <h3>Counting a forest<small>Spatial foundations for forest climate action in the Peruvian Amazon</small></h3>
+          <ul class="eq"><li>Geospatial data</li><li>LiDAR</li><li>Carbon policy</li><li>Ground truth</li></ul>
+        </div>
+      </div>
+      <div class="proj-body"><div class="proj-body-in">
+      <div class="proj-grid">
+        <div>
+          <p>A carbon credit is a measurement claim wearing a financial costume. With BCarbon I worked the measurement side — LiDAR, land-use analysis, and the policy constraints that decide what a credit may certify. <em>The technical and the regulatory turn out to be the same conversation.</em></p>
+
+          <p class="trail-h">Where it went</p>
+            <ul class="trail">
+            <li class="win"><time>2025</time><span><strong>Sole undergraduate presenter</strong> — research poster, National Annual Carbon Hub Meeting, Rice</span></li>
+          </ul>
+        </div>
+        <div class="proj-vis">
+          <div class="plate has-img"><img src="images/plate-bcarbon.svg" alt="Placeholder sketch — LiDAR fan over a forest transect" loading="lazy"></div>
+          <p class="note">field data is never as clean as the model wants</p>
+        </div>
+      </div>
+      </div></div>
+    </article>
+
+    <!-- SALVAS -->
+    <article class="proj up" id="salvas" style="--accent:#C0621B" data-lens="hardware field safety venture">
+      <div class="proj-head">
+        <div class="stack"><span class="mark"><span>S</span></span><span class="yr">2018–19</span></div>
+        <div>
+          <p class="meta">2018 – 2019 · Costa Rica · advised by OVSICORI</p>
+          <h3>SALVAS<small>Finding people under a collapsed building, automatically</small></h3>
+          <ul class="eq"><li>Electronics</li><li>Disaster response</li><li>Seismology</li><li>Social venture</li></ul>
+        </div>
+      </div>
+      <div class="proj-body"><div class="proj-body-in">
+      <div class="proj-grid">
+        <div>
+          <p>Costa Rica sits on a subduction zone. SALVAS is an automated localization system for the first hours after a collapse — built in high school, advised by OVSICORI, the national seismological institute, around one constraint: <em>disaster equipment has to stay simple, deployable, resilient.</em> It won nationally, then internationally in Mexico City.</p>
+
+          <p class="trail-h">Where it went</p>
+            <ul class="trail">
+            <li class="win"><time>2019</time><span><strong>International first place</strong> — Cadena Initiative Natural Disasters Social Entrepreneurship Competition, Mexico City <a href="https://cadena.ngo/iniciativa-cadena/" target="_blank" rel="noopener">about ↗</a></span></li>
+            <li class="win"><time>2018</time><span><strong>National winner</strong> — Cadena Initiative, natural disaster innovation, Costa Rica</span></li>
+          </ul>
+
+        </div>
+        <div class="proj-vis">
+          <div class="plate has-img"><img src="images/plate-salvas.svg" alt="Placeholder sketch — SALVAS device with antenna and seismic panel" loading="lazy"></div>
+          <p class="note">I had never soldered before this</p>
+        </div>
+      </div>
+      </div></div>
+    </article>
+
+    <!-- DIMREH -->
+    <article class="proj up" id="dimreh" style="--accent:#9A7B1F" data-lens="hardware safety product bio">
+      <div class="proj-head">
+        <div class="stack"><span class="mark"><span>D</span></span><span class="yr">2019–20</span></div>
+        <div>
+          <p class="meta">2019 – 2020 · Costa Rica · extended at Harvard Extension School</p>
+          <h3>DIMREH<small>A house that notices when something is going wrong in it</small></h3>
+          <ul class="eq"><li>IoT</li><li>Risk detection</li><li>Human-centred design</li><li>Medical applications</li></ul>
+        </div>
+      </div>
+      <div class="proj-body"><div class="proj-body-in">
+      <div class="proj-grid">
+        <div>
+          <p>Most household emergencies announce themselves early; nobody is watching. DIMREH is a low-cost IoT monitor for that gap, later extended in a Harvard graduate course. The through-line to everything above it: <em>sense something physical, decide what counts as abnormal, tell someone in time.</em></p>
+
+          <p class="trail-h">Where it went</p>
+            <ul class="trail">
+            <li class="win"><time>2020</time><span><strong>Best presentation pitch</strong> — Eureka Science &amp; Engineering Competition, and among the national finalist projects competing to represent Costa Rica at ISEF 2020 <a href="https://www.crhoy.com/tecnologia/estudiantes-compiten-por-un-puesto-en-feria-internacional/" target="_blank" rel="noopener">CRHoy ↗</a></span></li>
+            <li class="win"><time>2019</time><span><strong>Honorific mention</strong> in scientific and technological innovation — Costa Rica National Science Fair <a href="https://www.mep.go.cr/noticias/estudiantes-escuelas-colegios-muestran-sus-conocimientos-cientificos" target="_blank" rel="noopener">MEP ↗</a></span></li>
+          </ul>
+
+        </div>
+        <div class="proj-vis">
+          <div class="plate has-img"><img src="images/plate-dimreh.svg" alt="Placeholder sketch — floor plan with sensor nodes" loading="lazy"></div>
+          <p class="note">the first enclosure was a lunchbox</p>
+        </div>
+      </div>
+      </div></div>
+    </article>
+
+    <p class="backmap"><a href="#field">↑ back to the map</a></p>
+
+  </div>
+</section>
+
+<!-- ════════ PLACES ════════ -->
+<section class="places">
+  <div class="wrap">
+    <h2 class="kicker">Where the work happened</h2>
+    <p class="lede-s">Six countries, chronological — the only order that explains anything.</p>
+    <ul class="route">
+      <li style="--pc:#C0621B"><time>until 2021</time><h4>San José, Costa Rica <span>science fairs · SALVAS · DIMREH · the first Compocycler</span></h4></li>
+      <li style="--pc:#A5342C"><time>2021 – present</time><h4>Houston, Texas <span>Rice · re:store · ORCADE · the Amazon carbon work</span></h4></li>
+      <li style="--pc:#6B7F2A"><time>2022</time><h4>Paris, France <span>engineering design · social-venture capstone</span></h4></li>
+      <li style="--pc:#6E3560"><time>2023</time><h4>Amsterdam &amp; Eindhoven <span>design bootcamp · presented at ASML</span></h4></li>
+      <li style="--pc:#12707C"><time>2023</time><h4>Ramat Gan, Israel <span>VR + physiological data, Sheba Medical Center</span></h4></li>
+      <li style="--pc:#3448A0"><time>2024</time><h4>Bologna, Italy <span>food machinery · Acqualizer starts here</span></h4></li>
+      <li class="back" style="--pc:#C0621B"><time>2024, 2025</time><h4>San José, again <span>venture analysis at Olivo · hospital innovation at Clínica Bíblica</span></h4></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ════════ ABOUT ════════ -->
+<section class="about">
+  <div class="wrap">
+    <h2 class="kicker">A few things that explain me better than a job title</h2>
+    <div class="frags">
+      <div class="frag"><p>I build things.</p><p>Not diagrams of things. The prototype exists, it gets tested, and usually it fails first.</p></div>
+      <div class="frag"><p>I move between fields on purpose.</p><p>The useful ideas are almost always imported from somewhere adjacent. Staying in one lane means never finding them.</p></div>
+      <div class="frag"><p>I care whether it works outside.</p><p>Bench conditions flatter a design. Houston humidity, porcine tissue and a live crop cycle do not.</p></div>
+    </div>
+
+    <div class="cv">
+      <div>
+        <h5>Education</h5>
+        <ul>
+          <li>Master of Bioengineering in Applied Bioengineering<em>Rice University · 2026</em></li>
+          <li>BS Bioengineering<em>Rice University · 2025</em></li>
+          <li>Minors: Entrepreneurship; Earth, Environmental &amp; Planetary Sciences<em>First engineer to minor in EEPS, first bioengineer to minor in Entrepreneurship</em></li>
+          <li>Harvard Extension School<em>Biomedical Product Development; Biochemical Engineering &amp; Synthetic Life — taken while in high school</em></li>
+          <li>Instituto Dr. Jaim Weizman<em>IB Diploma · valedictorian</em></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Roles</h5>
+        <ul>
+          <li>Founder &amp; CEO, HydroTwin Labs<em>2026 – present</em></li>
+          <li>Founder &amp; Consultant, DNL Ventures<em>2026 – present</em></li>
+          <li>Innovation Manager, Hospital Clínica Bíblica<em>Life Science Center for Innovation · 2025</em></li>
+          <li>Program Strategy Advisor, Rice CLIC<em>2024–2025</em></li>
+          <li>Technology &amp; Venture Analyst, Olivo Partners<em>2024</em></li>
+          <li>Human Systems Engineer, Sheba Medical Center<em>2023</em></li>
+          <li>Hardware Systems Engineer, re:3D<em>2022</em></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Selected honours</h5>
+        <ul>
+          <li>Christiaan Scholtz Award<em>Top award for the graduating master's student, Rice Bioengineering · 2026</em></li>
+          <li>First Graduating Senior Spotlight<em>SHPE at Rice · 2025</em></li>
+          <li>Crowd Favorite, Medical Innovation Bootcamp<em>Rice University · 2022</em></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Tools I actually use</h5>
+        <ul>
+          <li>SolidWorks, CAD, 3D printing, rapid prototyping</li>
+          <li>Arduino, Nextion, sensors, electronics</li>
+          <li>Python, MATLAB, scikit-learn, pandas, Streamlit, Plotly</li>
+          <li>Fluid simulation, signal processing, geospatial data, LiDAR</li>
+          <li>Microfabrication, hardware testing and validation</li>
+        </ul>
+      </div>
+      <div>
+        <h5>Languages</h5>
+        <ul>
+          <li>Spanish<em>Native</em></li>
+          <li>English<em>Fluent</em></li>
+          <li>Hebrew<em>Fluent</em></li>
+          <li>French<em>Advanced</em></li>
+          <li>Italian<em>Conversational</em></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ CONTACT ════════ -->
+<section class="end" id="end">
+  <div class="wrap">
+    <h2>If you have a problem that doesn't fit <i>neatly</i> either, I'd like to hear about it.</h2>
+    <ul class="reach">
+      <li><a href="mailto:daniela@dnlventures.tech">daniela@dnlventures.tech</a></li>
+      <li><a href="https://www.linkedin.com/in/daniela-najmias-lang/" target="_blank" rel="noopener">LinkedIn</a></li>
+      <li><a href="resume.pdf">Résumé ↗</a></li>
+    </ul>
+    <p class="aside-note">Also open to occasional independent technical diligence — whether an early-stage hardware or climate technology does what its founders believe it does.</p>
+  </div>
+</section>
+
+</main>
+
+<footer class="wrap">
+  <span>Houston, Texas</span>
+  <span>Hand-built, no frameworks — set in Switzer &amp; Gambetta</span>
+  <span>© 2026 Daniela Najmias Lang</span>
+</footer>
+
+<script>
+(function(){
+  var reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  var sw = document.getElementById('switch');
+  sw.addEventListener('click', function(){
+    var on = document.body.classList.toggle('messy');
+    sw.setAttribute('aria-pressed', on ? 'true' : 'false');
+  });
+
+  /* in-page anchors share the constellation's scroll path (respects scroll-margin) */
+  document.addEventListener('click', function(e){
+    var a = e.target.closest && e.target.closest('a[href^="#"]');
+    if (!a) return;
+    var el = document.getElementById(a.getAttribute('href').slice(1));
+    if (!el) return;
+    e.preventDefault();
+    history.pushState(null, '', a.getAttribute('href'));
+    el.scrollIntoView({behavior: reduced ? 'auto' : 'smooth', block: 'start'});
+  });
+
+  var bar = document.getElementById('topbar');
+  var docEl = document.documentElement;
+  function onScroll(){
+    bar.classList.toggle('stuck', scrollY > 12);
+    var max = docEl.scrollHeight - innerHeight;
+    bar.style.setProperty('--prog', max > 0 ? (scrollY / max).toFixed(4) : 0);
+  }
+  addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  var copy = {
+    hardware:      'Five of these are objects you can pick up. <b>Sensors, controls, enclosures, things that have to survive a room.</b>',
+    ml:            'Models are a tool here, not the job. <b>They exist to decide whether a physical system is telling the truth.</b>',
+    sustainability:'The environmental thread is the oldest one. <b>It started at fourteen and never stopped.</b>',
+    product:       'Every one of these had to become something someone could hold, run, or buy. <b>Prototype is not the finish line.</b>',
+    bio:           'Biology shows up as a constraint and occasionally as an instrument. <b>Plants and tissue are unforgiving reviewers.</b>',
+    venture:       'Does it work is the first question. <b>Does anyone need it, can we make it, can it scale — those are the ones I stayed for.</b>',
+    field:         'Bench conditions flatter a design. <b>Houston humidity, a live crop cycle and an Amazon canopy do not.</b>',
+    safety:        'Two of these were built to find people or warn them in time. <b>Both before I turned eighteen, both advised by people who do it for real.</b>'
+  };
+  var idle = 'Pick one and the set rearranges itself. Nothing here belongs to a single column.';
+  var out = document.getElementById('lensOut');
+  var projects = [].slice.call(document.querySelectorAll('.proj'));
+  var buttons = [].slice.call(document.querySelectorAll('.lens'));
+  var active = null;
+
+  var field  = document.getElementById('field');
+  var threads = field ? [].slice.call(field.querySelectorAll('.th')) : [];
+  var discs   = field ? [].slice.call(field.querySelectorAll('.disc')) : [];
+  var nodes   = field ? [].slice.call(field.querySelectorAll('.node')) : [];
+
+  function clearLit(){
+    if (!field) return;
+    field.classList.remove('busy');
+    threads.forEach(function(t){ t.classList.remove('lit'); });
+    discs.forEach(function(d){ d.classList.remove('lit'); });
+    nodes.forEach(function(n){ n.classList.remove('lit'); });
+  }
+  function held(){
+    /* whatever discipline is currently filtering stays underlined */
+    discs.forEach(function(d){ d.classList.toggle('held', d.dataset.d === active); });
+  }
+
+  /* apply a discipline filter to the project list below */
+  var clearBtn = document.getElementById('clearLens');
+  function setLens(key){
+    active = (active === key) ? null : key;
+    buttons.forEach(function(b){ b.setAttribute('aria-pressed', b.dataset.lens === active ? 'true' : 'false'); });
+    var matches = 0;
+    projects.forEach(function(p){
+      var has = !active || (p.dataset.lens || '').split(' ').indexOf(active) > -1;
+      if (has) matches++;
+      p.classList.toggle('dim', !has);
+    });
+    out.innerHTML = active ? '<b>' + matches + ' of ' + projects.length + '</b> — ' + copy[active] : idle;
+    if (clearBtn) clearBtn.hidden = !active;
+    held();
+  }
+  buttons.forEach(function(btn){
+    btn.addEventListener('click', function(){ setLens(btn.dataset.lens); });
+  });
+  if (clearBtn) clearBtn.addEventListener('click', function(){ if (active) setLens(active); });
+
+  if (field) {
+    /* hover a project: light its threads and the disciplines it touches */
+    nodes.forEach(function(n){
+      function on(){
+        clearLit(); field.classList.add('busy'); n.classList.add('lit');
+        threads.forEach(function(t){
+          if (t.dataset.p === n.dataset.p) {
+            t.classList.add('lit');
+            var d = discs.filter(function(x){ return x.dataset.d === t.dataset.d; })[0];
+            if (d) d.classList.add('lit');
+          }
+        });
+      }
+      n.addEventListener('mouseenter', on);
+      n.addEventListener('focus', on);
+      n.addEventListener('mouseleave', function(){ clearLit(); held(); });
+      n.addEventListener('blur', function(){ clearLit(); held(); });
+      function go(){
+        var el = document.getElementById(n.dataset.p);
+        if (el) el.scrollIntoView({behavior: reduced ? 'auto' : 'smooth', block: 'start'});
+      }
+      n.addEventListener('click', go);
+      n.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(); } });
+    });
+
+    /* hover a discipline: light every project that draws on it */
+    discs.forEach(function(d){
+      function on(){
+        clearLit(); field.classList.add('busy'); d.classList.add('lit');
+        threads.forEach(function(t){
+          if (t.dataset.d === d.dataset.d) {
+            t.classList.add('lit');
+            var n = nodes.filter(function(x){ return x.dataset.p === t.dataset.p; })[0];
+            if (n) n.classList.add('lit');
+          }
+        });
+      }
+      d.addEventListener('mouseenter', on);
+      d.addEventListener('focus', on);
+      d.addEventListener('mouseleave', function(){ clearLit(); held(); });
+      d.addEventListener('blur', function(){ clearLit(); held(); });
+      d.addEventListener('click', function(){ setLens(d.dataset.d); });
+      d.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); setLens(d.dataset.d); } });
+    });
+  }
+
+  var s1 = document.getElementById('s1'), s2 = document.getElementById('s2'),
+      o1 = document.getElementById('o1'), o2 = document.getElementById('o2'),
+      vd = document.getElementById('verdict'), vt = document.getElementById('vtag'), vx = document.getElementById('vtext');
+  function model(){
+    var a = parseFloat(s1.value), b = parseFloat(s2.value), r = Math.abs(a - b);
+    o1.textContent = a.toFixed(1) + ' °C';
+    o2.textContent = b.toFixed(1) + ' °C';
+    if (r < 1.5) {
+      vd.classList.remove('bad'); vt.textContent = 'Agreement';
+      vx.textContent = 'Residual within tolerance. The probe is telling the truth.';
+    } else if (r < 4) {
+      vd.classList.add('bad'); vt.textContent = 'Drift';
+      vx.textContent = 'Residual of ' + r.toFixed(1) + ' °C. Small, persistent, and the kind nobody notices until harvest.';
+    } else {
+      vd.classList.add('bad'); vt.textContent = 'Flagged';
+      vx.textContent = 'Residual of ' + r.toFixed(1) + ' °C. The plants and the sensor are describing two different rooms. Check the probe, not the crop.';
+    }
+  }
+  if (s1) { s1.addEventListener('input', model); s2.addEventListener('input', model); model(); }
+
+  if ('IntersectionObserver' in window && !reduced) {
+    var io = new IntersectionObserver(function(es){
+      es.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, {rootMargin:'0px 0px -10% 0px'});
+    document.querySelectorAll('.up').forEach(function(el){ io.observe(el); });
+  } else {
+    document.querySelectorAll('.up').forEach(function(el){ el.classList.add('in'); });
+  }
+})();
+</script>
+
+<script src="vendor/gsap.min.js"></script>
+<script>
+/* SORT IT — the Compocycler game. Kaplay is lazy-loaded on Play; the editorial
+   site below is the DOM default and never depends on any of this. */
+(function(){
+  var reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var arcade = document.getElementById('arcade');
+  if (!arcade) return;
+  var stage = document.getElementById('acStage'), game = document.getElementById('acGame'),
+      payoff = document.getElementById('acPayoff'), msgEl = document.getElementById('acMsg'),
+      eraEl = document.getElementById('acEra'), binImg = document.getElementById('acBin'),
+      noteEl = document.getElementById('acNote'), actions = stage.querySelector('.ac-actions');
+  var K = null, kaplayLoading = null, confettiLoading = null;
+
+  function say(t){ msgEl.textContent = t; }
+
+  function openArcade(coldOpen){
+    try { localStorage.setItem('dn_arcade_v1', '1'); } catch(e){}
+    arcade.hidden = false;
+    document.body.classList.add('arcade-lock');
+    stage.hidden = false; game.hidden = true; payoff.hidden = true;
+    if (coldOpen && window.gsap && !reduced) runColdOpen();
+    else { noteEl.style.opacity = 1; actions.style.opacity = 1; }
+  }
+  function closeArcade(){
+    document.body.classList.remove('arcade-lock');
+    if (K) { try { K.quit(); } catch(e){} K = null; }
+    function done(){ arcade.hidden = true; if (window.gsap) gsap.set(arcade, {opacity: 1}); }
+    if (window.gsap && !reduced) gsap.to(arcade, {opacity: 0, duration: .4, onComplete: done});
+    else done();
+  }
+
+  function runColdOpen(){
+    var binR = binImg.getBoundingClientRect(), stR = stage.getBoundingClientRect();
+    var drop = (binR.top - stR.top) - (stR.height / 2) + 60;
+    gsap.set('#acResume', {opacity: 1, y: 0});
+    var tl = gsap.timeline();
+    tl.from(binImg, {y: 36, opacity: 0, duration: .45, ease: 'power2.out'})
+      .to('#acResume', {y: drop + 190, rotation: 9, duration: .85, ease: 'power1.in'}, '+=.25')
+      .to('#acResume', {scaleY: .12, opacity: 0, transformOrigin: '50% 100%', duration: .2})
+      .to(binImg, {scaleY: .87, transformOrigin: '50% 100%', duration: .1, yoyo: true, repeat: 3}, '<')
+      .to(binImg, {rotation: 1.5, duration: .08, yoyo: true, repeat: 3}, '<')
+      .to(noteEl, {opacity: 1, duration: .5}, '+=.2')
+      .to(actions, {opacity: 1, duration: .4}, '<+=.25');
+  }
+
+  function loadScript(src){
+    return new Promise(function(res, rej){
+      var s = document.createElement('script');
+      s.src = src; s.onload = res; s.onerror = rej;
+      document.head.appendChild(s);
+    });
+  }
+
+  function startGame(){
+    stage.hidden = true; payoff.hidden = true; game.hidden = false;
+    say(''); eraEl.textContent = 'SCORE 0 · 2017 · the science-fair build';
+    kaplayLoading = kaplayLoading || loadScript('vendor/kaplay.js');
+    kaplayLoading.then(runGame).catch(function(){ showPayoff(); });
+  }
+
+  function runGame(){
+    if (K) { try { K.quit(); } catch(e){} K = null; }
+    var W = 720, H = 560;
+    try {
+      K = kaplay({
+        canvas: document.getElementById('acCanvas'),
+        width: W, height: H, letterbox: true, stretch: true, global: false,
+        background: [244, 243, 240], pixelDensity: Math.min(devicePixelRatio || 1, 2),
+        maxFPS: 60,
+      });
+    } catch(e) { showPayoff(); return; }
+    var k = K;
+    var SPR = {
+      bin1: 'images/game/bin-era1.svg', bin2: 'images/game/bin-era2.svg', bin3: 'images/game/bin-era3.svg',
+      bottle: 'images/game/bottle.svg', bag: 'images/game/bag.svg', wrapper: 'images/game/wrapper.svg',
+      apple: 'images/game/apple.svg', banana: 'images/game/banana.svg', leaf: 'images/game/leaf.svg',
+      eggshell: 'images/game/eggshell.svg', resume: 'images/game/resume-item.svg',
+    };
+    Object.keys(SPR).forEach(function(n){ k.loadSprite(n, SPR[n]); });
+
+    var PLASTICS = ['bottle', 'bag', 'wrapper'];
+    var ORGANICS = ['apple', 'banana', 'leaf', 'eggshell'];
+    var score = 0, misses = 0, forgiven = false, over = false, resumeDropped = false;
+    var speed = 135, spawnGap = 1.45, spawnT = .6, era = 1;
+    var BIN_W = 300, BIN_H = 330, binX = W / 2, binTopY = H - BIN_H + 24;
+
+    var bin = k.add([k.sprite('bin1'), k.pos(binX, H - 6), k.anchor('bot'), k.scale(1.5), k.z(1)]);
+
+    function eraLabel(){
+      return era === 1 ? '2017 · the science-fair build'
+           : era === 2 ? '2019 · the competition years'
+           : 'BioBoost · 2025';
+    }
+    function hud(){ eraEl.textContent = 'SCORE ' + score + ' · ' + eraLabel(); }
+
+    function spawn(){
+      if (over) return;
+      var kind, name;
+      if (!resumeDropped && score >= 5) {
+        resumeDropped = true; kind = 'resume'; name = 'resume';
+      } else if (Math.random() < .5) {
+        kind = 'plastic'; name = PLASTICS[Math.floor(Math.random() * PLASTICS.length)];
+      } else {
+        kind = 'organic'; name = ORGANICS[Math.floor(Math.random() * ORGANICS.length)];
+      }
+      k.add([
+        k.sprite(name), k.pos(binX + k.rand(-130, 130), -50), k.anchor('center'),
+        k.rotate(k.rand(-9, 9)), k.z(2), 'item',
+        { vy: speed, vx: 0, kind: kind, resolved: false },
+      ]);
+    }
+
+    function active(){
+      var best = null;
+      k.get('item').forEach(function(it){
+        if (!it.resolved && (!best || it.pos.y > best.pos.y)) best = it;
+      });
+      return best;
+    }
+    function deflect(dir){
+      var it = active();
+      if (it) it.tx = binX + dir * 80;
+    }
+    k.onKeyPress('left', function(){ deflect(-1); });
+    k.onKeyPress('right', function(){ deflect(1); });
+    k.onMousePress(function(){ deflect(k.mousePos().x < W / 2 ? -1 : 1); });
+
+    function resolve(it){
+      it.resolved = true;
+      var inBin = Math.abs(it.pos.x - binX) < BIN_W / 2;
+      var side = it.pos.x < binX ? 'plastic' : 'organic';
+      if (it.kind === 'resume') {
+        score += 1; say('fair.'); pop(it); hud(); return;
+      }
+      if (inBin && side === it.kind) {
+        score += 1; pop(it); milestones();
+      } else {
+        misses += 1;
+        say(!inBin ? "on the floor. that's neither bin."
+            : it.kind === 'plastic' ? 'the composter votes no.' : 'the compactor votes no.');
+        it.vy = -280; it.vx = (it.pos.x < binX ? -1 : 1) * 160; it.spin = true;
+        k.wait(.8, function(){ if (it.exists()) k.destroy(it); });
+        strikes();
+      }
+      hud();
+    }
+    function pop(it){
+      it.vy = -140; it.vx = 0;
+      k.wait(.12, function(){ if (it.exists()) k.destroy(it); });
+    }
+    function milestones(){
+      if (score >= 26) { win(); return; }
+      if (score >= 18 && era < 3) { era = 3; bin.use(k.sprite('bin3')); say('BioBoost. the grad-school version.'); }
+      else if (score >= 8 && era < 2) { era = 2; bin.use(k.sprite('bin2')); say('the competition years. it won things.'); }
+      speed += 7; spawnGap = Math.max(.8, spawnGap - .045);
+    }
+    function strikes(){
+      if (misses < 3) return;
+      if (!forgiven) {
+        forgiven = true; misses = 0;
+        say('version 2 is in a garage in San José. you can do better.');
+      } else {
+        say("nine years of iterations — she didn't quit either.");
+        win();
+      }
+    }
+    function win(){
+      if (over) return;
+      over = true;
+      k.wait(.9, function(){ showPayoff(); });
+    }
+
+    k.onUpdate(function(){
+      if (over) return;
+      spawnT -= k.dt();
+      if (spawnT <= 0) { spawn(); spawnT = spawnGap; }
+      k.get('item').forEach(function(it){
+        it.pos.y += it.vy * k.dt();
+        if (!it.resolved && it.tx !== undefined) {
+          var dx = it.tx - it.pos.x, step = 420 * k.dt();
+          it.pos.x += Math.abs(dx) <= step ? dx : Math.sign(dx) * step;
+        } else {
+          it.pos.x += it.vx * k.dt();
+        }
+        if (it.spin) it.angle += 320 * k.dt();
+        if (it.pos.x < 24) it.pos.x = 24;
+        if (it.pos.x > W - 24) it.pos.x = W - 24;
+        if (!it.resolved && it.pos.y >= binTopY) resolve(it);
+        if (it.pos.y > H + 90) k.destroy(it);
+      });
+    });
+    hud();
+  }
+
+  function showPayoff(){
+    if (K) { try { K.quit(); } catch(e){} K = null; }
+    stage.hidden = true; game.hidden = true; payoff.hidden = false;
+    if (window.gsap && !reduced) {
+      gsap.from('#acCard', {scale: 1.6, opacity: 0, rotation: -5, duration: .5, ease: 'power3.out'});
+    }
+    confettiLoading = confettiLoading || loadScript('vendor/confetti.browser.js');
+    confettiLoading.then(function(){
+      if (window.confetti && !reduced) {
+        confetti({particleCount: 70, spread: 75, origin: {y: .7},
+                  colors: ['#6B7F2A', '#191A1B', '#C0621B', '#12707C']});
+      }
+    }).catch(function(){});
+  }
+
+  document.getElementById('acPlay').addEventListener('click', startGame);
+  document.getElementById('acDone').addEventListener('click', closeArcade);
+  document.getElementById('arcadeSkip').addEventListener('click', function(e){ e.preventDefault(); closeArcade(); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape' && !arcade.hidden) closeArcade(); });
+  [['acReplay', false], ['acReplayHero', false]].forEach(function(pair){
+    var el = document.getElementById(pair[0]);
+    if (el) el.addEventListener('click', function(e){ e.preventDefault(); openArcade(false); startGame(); });
+  });
+
+  var seen = false;
+  try { seen = localStorage.getItem('dn_arcade_v1') === '1'; } catch(e){}
+  if (!seen && !reduced) openArcade(true);
+
+  /* test hook (also lets the curious cheat from the console — that's allowed) */
+  window.__sortit = { start: startGame, payoff: showPayoff, close: closeArcade, open: openArcade,
+                      k: function(){ return K; } };
+})();
+</script>
+</body>
+</html>

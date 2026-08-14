@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="52" height="66" viewBox="0 0 52 66">
+<g fill="none" stroke-linecap="round" stroke-linejoin="round">
+<path d="M8 6 h28 l8 10 v44 h-36 z" stroke="#63656A" stroke-width="3" />
+<path d="M36 6 v10 h8" stroke="#63656A" stroke-width="2" />
+<path d="M16 26 h20 M16 34 h20 M16 42 h14" stroke="#63656A" stroke-width="1.8" />
+<text x="26" y="58" text-anchor="middle" font-family="system-ui,sans-serif" font-size="8.5" fill="#63656A">resume.pdf</text>
+</g>
+</svg>
